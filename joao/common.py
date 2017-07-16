@@ -74,16 +74,18 @@ class Foods(enum.Enum):
     CARROT     = 'carrot'
 
 # Defind list for fruits
-Fruits = [Foods.APPLE.value, 
-          Foods.BANANA.value, 
-          Foods.ORANGE.value, 
-          Foods.STRAWBERRY.value
-          ]
+Fruits = [    
+             Foods.APPLE.value, 
+             Foods.BANANA.value, 
+             Foods.ORANGE.value, 
+             Foods.STRAWBERRY.value
+         ]
 
 # Defind list for vegatables
-Vegetables = [Foods.BEETROOT.value, 
-              Foods.CARROT.value, 
-              Foods.CELERY.value, 
-              Foods.CUCMBER.value
-              ]
+Vegetables = [
+                 Foods.BEETROOT.value, 
+                 Foods.CARROT.value, 
+                 Foods.CELERY.value, 
+                 Foods.CUCMBER.value
+             ]
 

@@ -125,17 +125,18 @@ class Paranuara(object):
 
                 return _preference
             else:
-                details = {}
+                _details = {}
 
                 for item in (person_1, person_2):
                     _person = {}
                     _p = self.person(item)
                     _person["username"] = _p[PersonFields.NAME.value]
-                    _person["Age"] = _p[PersonFields.AGE.value]
-                    _person["Address"] = _p[PersonFields.ADDRESS.value]
-                    _person["Phone"] = _p[PersonFields.PHONE.value]
+                    _person["Age"]      = _p[PersonFields.AGE.value]
+                    _person["Address"]  = _p[PersonFields.ADDRESS.value]
+                    _person["Phone"]    = _p[PersonFields.PHONE.value]
+
                     _tag = "id_{0}".format(item)
-                    details[_tag] = _person
+                    _details[_tag] = _person
 
                 _p_1 = self.person(person_1)
                 _p_2 = self.person(person_2)
@@ -145,9 +146,9 @@ class Paranuara(object):
                     if (item[PersonFields.EYE_COLOR.value] == "brown" and
                         item[PersonFields.HAS_DIED.value] is False):
                         _common.append(item)
-                details['common_friends'] = _common
+                _details['common_friends'] = _common
 
-                return details
+                return _details
         except Exception:
             self._log.exception("Invalid person with ID {0} or {1} is provided".format(person_1, person_2))
             raise
